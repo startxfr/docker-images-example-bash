@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while true; do
+    echo "$HOSTNAME ($SX_ID:$SX_VERSION) is running ..."
+    sleep 10
+done
