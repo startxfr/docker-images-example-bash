@@ -1,0 +1,10 @@
+#!/bin/bash -e
+#
+# Source code usage script. Will replace the default usage script provided by STARTX.
+# This script will be run on demand
+#
+# For more information refer to the documentation:
+#  https://github.com/startxfr/docker-images
+#
+
+exec /bin/sx usageS2i

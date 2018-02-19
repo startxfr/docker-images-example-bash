@@ -1,0 +1,10 @@
+#!/bin/bash -e
+#
+# Source code pre-deploy script complementary to the application server pre-deploy script provided by STARTX.
+# This script will be executed before the deployement of a new container (or pod)
+#
+# For more information refer to the documentation:
+#  https://github.com/startxfr/docker-images
+#
+
+/bin/sx pre-deploy
