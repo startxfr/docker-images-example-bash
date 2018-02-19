@@ -7,4 +7,5 @@
 #  https://github.com/startxfr/docker-images
 #
 
-/bin/sx pre-deploy
+# app could be found in $APP_PATH
+echo "this is the source code pre-deploy hook"

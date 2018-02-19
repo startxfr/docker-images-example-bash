@@ -7,4 +7,5 @@
 #  https://github.com/startxfr/docker-images
 #
 
-/bin/sx post-build
+# app could be found in $APP_PATH
+echo "this is the source code post-build hook"
