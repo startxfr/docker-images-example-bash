@@ -7,4 +7,5 @@
 #  https://github.com/startxfr/docker-images
 #
 
+# app could be found in $APP_PATH
 /bin/sx assemble
