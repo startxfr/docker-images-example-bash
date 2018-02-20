@@ -8,4 +8,4 @@
 #
 
 # app could be found in $APP_PATH
-/bin/sx assemble
+echo "this is the source code assemble hook"
