@@ -9,3 +9,5 @@
 
 # app could be found in $APP_PATH
 echo "this is the source code pre-deploy hook"
+exit 0;
+# if you want to fail the pre-deploy hook, exit with error code > 0
