@@ -1,8 +1,10 @@
 #!/bin/bash
 
-echo "+====================================================="
-echo "| Container $HOSTNAME is RUNNING"
-echo "+====================================================="
+echoNotVerbose "Execute source code runtime"
+echoVerbose ""
+echoVerbose "+====================================================="
+echoVerbose "Execute source code runtime"
+echoVerbose "+====================================================="
 
 while true; do
     echo "$HOSTNAME ($SX_ID:$SX_VERSION) is running ..."

@@ -8,8 +8,4 @@
 #
 
 # app could be found in $APP_PATH
-echo "this is the source code run script"
-while true; do
-    echo "$HOSTNAME ($SX_ID:$SX_VERSION) is running ..."
-    sleep 10
-done
+exec $APP_PATH/run
