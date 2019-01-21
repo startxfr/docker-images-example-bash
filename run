@@ -6,6 +6,7 @@
 # For more information refer to the documentation:
 #  https://github.com/startxfr/docker-images
 #
+source $SX_LIBDIR/sx
 
 echoNotVerbose "Execute source code runtime"
 echoVerbose ""
