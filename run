@@ -1,20 +1,35 @@
 #!/bin/bash -e
-#
-# Source code run script. Will be executed as the container entrypoint.
-# This script must be run within a STARTX builder image
-#
-# For more information refer to the documentation:
-#  https://github.com/startxfr/docker-images
-#
-source $SX_LIBDIR/sx
+##
+## Source code run script. Will be executed as the container entrypoint.
+## This script must be run within a STARTX builder image
+##
+## For more information refer to the documentation:
+##  https://github.com/startxfr/docker-images
+##
+
+## test sx lib is loaded. Not available when running this image directly without 
+## application build action.
+## When using s2i builder or builded image, sx lib is loaded.
+if [ -n "$(type -t isVerbose)" ] && [ "$(type -t isVerbose)" = function ]; then 
+  echoVerbose "sx lib is already loaded"
+else 
+  source $SX_LIBDIR/sx
+fi
 
 echoNotVerbose "Execute source code runtime"
-echoVerbose ""
 echoVerbose "+====================================================="
 echoVerbose "Execute source code runtime"
 echoVerbose "+====================================================="
 
+## Personalized daemon 
+## you can customize this section to run a daemonize application
 while true; do
     echo "$HOSTNAME ($SX_ID:$SX_VERSION) is running ..."
     sleep 10
 done
+
+## Example for running an external application 
+# exec /bin/example
+
+## Execute the default daemon action delivered by sx lib.
+#startDaemon

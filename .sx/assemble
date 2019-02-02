@@ -1,18 +1,32 @@
 #!/bin/bash -e
-#
-# Source code assemble script complementary to the application server assemble script provided by STARTX.
-# This script will run after the middleware assembling and before publishing the resulting image
-# This script must be run within a STARTX builder image
-#
-# For more information refer to the documentation:
-#  https://github.com/startxfr/docker-images
-#
+##
+## Source code assemble script complementary to the application server assemble script provided by STARTX.
+## This script will run after the middleware assembling and before publishing the resulting image
+## This script must be run within a STARTX builder image
+##
+## For more information refer to the documentation:
+##  https://github.com/startxfr/docker-images
+##
 
-echoNotVerbose "Sample application build hook"
-echoVerbose ""
-echoVerbose "+====================================================="
-echoVerbose "Sample application build hook"
-echoVerbose "+====================================================="
+cat <<EOF
+|                                                                         _      
+|  _ __ ___  _   _  __ _ _ __  _ __         _____  ____ _ _ __ ___  _ __ | | ___ 
+| | '_ ` _ \| | | |/ _` | '_ \| '_ \ _____ / _ \ \/ / _` | '_ ` _ \| '_ \| |/ _ \
+| | | | | | | |_| | (_| | |_) | |_) |_____|  __/>  < (_| | | | | | | |_) | |  __/
+| |_| |_| |_|\__, |\__,_| .__/| .__/       \___/_/\_\__,_|_| |_| |_| .__/|_|\___|
+|            |___/      |_|   |_|                                  |_|           
+|  _           _ _     _
+| | |__  _   _(_) | __| |
+| | '_ \| | | | | |/ _` |
+| | |_) | |_| | | | (_| |
+| |_.__/ \__,_|_|_|\__,_|
+| 
+EOF
 
-# if you want to fail the build hook, exit with error code > 0
-# exit 1;
+## Execute your own build logic delivered by sx lib
+## if you want to fail this action, exit with error code > 0
+# touch $LOG_PATH/system.log
+# exit 0;
+
+## Start default system build logic delivered by sx lib
+doGenericBuild
