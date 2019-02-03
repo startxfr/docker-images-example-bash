@@ -18,7 +18,7 @@ fi
 
 echoNotVerbose "Execute source code runtime"
 echoVerbose "+====================================================="
-echoVerbose "Execute source code runtime"
+echoVerbose "| Execute source code runtime"
 echoVerbose "+====================================================="
 
 ## Personalized daemon 
