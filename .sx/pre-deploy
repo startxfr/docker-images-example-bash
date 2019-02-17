@@ -30,3 +30,4 @@ EOF
 
 ## Start default system pre-deploy logic delivered by sx lib
 doGenericPreDeploy
+exit 0;
